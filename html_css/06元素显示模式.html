@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+        }
+        div{
+            /* 标签转换 */
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 块级标签 -->
+    <!-- 独占一行 可以设置行高 父级宽度-->
+    <div class="color">div</div>
+    <div class="color">div</div>
+    <p class="color">ppp</p>
+    <h3 class="color">h3</h3>
+
+    <!-- 行内标签 -->
+    <!-- 无法设置宽高 大小由内容决定 -->
+    <a href="#"  class="color">链接</a>
+    <span class="color">span</span>
+    <br>
+
+    <!-- 行内块 -->
+    <!-- 可以设置宽高 -->
+    <input type="text">
+    <img src="./k60.webp" alt="">
+</body>
+</html>

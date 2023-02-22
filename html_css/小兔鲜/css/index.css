@@ -1,0 +1,325 @@
+/* 放index页面的样式表 */
+.banner{
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper{
+    position: relative;
+    height: 500px;
+    background-color: skyblue;
+}
+
+.banner .aside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.banner .aside li{
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside li a{
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    padding-right: 20px;
+    height: 50px;
+    width: 250px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.banner .aside li a:hover{
+    background-color: #27b99b;
+}
+
+.banner .aside li a span{
+    margin-left: 15px;
+    font-size: 14px;
+
+}
+
+.banner .aside li a::after{
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    content: "";
+    width: 6px;
+    height: 11px;
+    background-image: url(../images/sprites.png);
+    background-position: -80px -110px;
+    
+}
+
+.banner .prev,
+.banner .next{
+    position: absolute;
+    top: 228px;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(0,0,0,.2);
+    background-image: url(../images/sprites.png);
+    border-radius: 50%;
+}
+
+.banner .prev{
+    left: 260px;
+    background-position: 14px -60px;
+}
+
+.banner .next{
+    right: 10px;
+    background-position: -24px -60px;
+}
+
+.banner ol{
+    position: absolute;
+    height: 10px;
+    width: 200px;
+    bottom: 30px;
+    left: 680px;
+    /* background-color: skyblue; */
+}
+
+.banner ol li{
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255,.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner ol .current{
+    background-color: #fff;
+}
+
+.goods .hd{
+    height: 114px;
+    line-height: 114px;
+    /* background-color: skyblue; */
+}
+
+.goods .left{
+    float: left;
+}
+
+.goods .left h2{
+    height: 114px;
+    font-size: 29px;
+    font-weight: 400;
+    color: #333;
+}
+
+.goods .left h2 span{
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .right{
+    float: right;
+}
+
+.goods .right a,
+.raw .hd .more{
+    color: #999;
+}
+
+.goods .right a::after,
+.raw .hd .more::after{
+    display: inline-block;
+    content: "";
+    margin-left: 13px;
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    vertical-align: middle;
+}
+
+.goods .bd ul li{
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+
+.goods .bd ul li:nth-child(4n){
+    margin-right: 0;
+}
+
+.goods .bd ul a img{
+    width: 304px;
+}
+
+.goods .bd ul li h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+.goods .bd ul li p{
+    font-size: 17px;
+    color: #9a2e1f;
+}
+
+.goods .bd ul li p span{
+    font-size: 23px;
+}
+
+.goods .bd ul li b{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 28px;
+    height: 51px;
+    color: #27b99b;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid #27b99b;
+    border-radius: 5px;
+}
+
+.raw{
+    margin-bottom: 10px;
+}
+
+.raw .hd{
+    height: 96px;
+    line-height: 96px;
+    /* background-color: skyblue; */
+}
+
+.raw .hd h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    color: #333;
+}
+
+.raw .hd .more{
+    float: right;
+}
+
+.raw .hd ul{
+    float: right;
+    margin-right: 65px;
+}
+
+.raw .hd ul li{
+    float: left;
+}
+
+.raw .hd ul li a{
+    padding: 2px 7px;
+    margin-left: 6px;
+    font-size: 16px;
+}
+
+.raw .hd ul li a:hover{
+    background-color: #27b99b;
+    color: #fff;
+}
+
+.raw .bd .left{
+    float: left;
+    width: 240px;
+    height: 610px;
+    background-color: skyblue;
+    
+}
+
+.raw .bd .right{
+    float: right;
+    width: 1000px;
+    height: 610px;
+    /* background-color: pink; */
+}
+
+.raw .bd .right li{
+    position: relative;
+    border: 2px solid transparent;
+    float: left;
+    margin-left: 8px;
+    margin-bottom: 3px;
+    width: 242px;
+    height: 304px;
+    /* transition: 0.3s; */
+    overflow: hidden;
+    /* background-color: #27b99b; */
+}
+
+.raw .bd .right li:hover{
+    border: 2px solid #27b99b;
+}
+
+/* .raw .bd .right li a{
+    display: block;
+} */
+
+.raw .bd .right li a .imgbox{
+    height: 204px;
+    text-align: center;
+}
+
+.raw .bd .right li a .imgbox img{
+    margin-top: 8px;
+    width: 184px;
+    height: 184px;
+}
+
+
+.raw .bd .right li a h3{
+    margin: 0 30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.raw .bd .right li a>p{
+    margin-left: 30px;
+    line-height: 1.2;
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+.raw .bd .right li a p span{
+    font-size: 22px;
+}
+
+.raw .bd .right li .more{
+    position: absolute;
+    bottom: -84px;
+    width: 238px;
+    height: 84px;
+    text-align: center;
+    background-color: #27b99b;
+    transition: 0.3s;
+}
+
+.raw .bd .right li:hover .more{
+    bottom: 0;
+}
+
+.raw .bd .right li .more p{
+    width: 125px;
+    font-size: 16px;
+    color: #fff;
+    margin: 25px auto 0;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #fff;
+}

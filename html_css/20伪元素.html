@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fa{
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+        }
+        .fa::before{
+            content: "老鼠";/* 必须添加content才可以构成伪元素 */
+            color: aqua;
+            height:100px;
+            width: 200px;
+            display: block;
+            background-color: violet;
+        }
+        .fa::after{
+            content: "大米";
+        }
+    </style>
+</head>
+<body>
+    <!-- 在父元素前后添加css模拟的标签 -->
+    <div class="fa">爱</div>
+</body>
+</html>
