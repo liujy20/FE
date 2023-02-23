@@ -31,7 +31,7 @@ git checkout -- readme.txt
 //放入暂存区回到暂存区状态
 //未放入回到版本库状态
 
-git reset HEAD readme.txt//暂存区的修改回退到工作区
+git reset HEAD readme.txt//暂存区清空
 
 git rm test.txt
 git commit -m "remove test.txt"//版本库删除文件
@@ -72,3 +72,4 @@ git log --graph//查看分支合并图
 
 
 
+##### 
