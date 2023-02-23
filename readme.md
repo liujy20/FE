@@ -28,10 +28,10 @@ git diff readme.txt//查看文件修改
 git diff HEAD -- readme.txt//查看文件工作区和版本区区别
 
 git checkout -- readme.txt
-//放入暂存区回到暂存区状态
-//未放入回到版本库状态
+//放入暂存区，暂存区覆盖工作区
+//未放入暂存区，版本库覆盖工作区
 
-git reset HEAD readme.txt//暂存区清空
+git reset HEAD readme.txt//版本库覆盖暂存区
 
 git rm test.txt
 git commit -m "remove test.txt"//版本库删除文件
