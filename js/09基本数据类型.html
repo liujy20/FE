@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 基本数据类型
+            // Number
+            let age = 12
+            let price = 12.3
+
+            // String
+            let s = '中文'
+            let s1 = 'en'
+            let str = ''
+            // console.log('我不"知道"')
+            // console.log('我不\'知道\'')
+            console.log('pink'+'老师')
+            // 模板字符串
+            console.log(`请使用${s}`)
+
+            // Boolean
+            let isCool = true
+            console.log(isCool)
+
+            // undefined
+            let num
+            console.log(num)
+            console.log(num + 1)
+
+            // null
+            let obj = null
+            console.log(obj)
+            console.log(obj + 1)
+
+        // 类型检测
+        let str1 = 'xwg'
+        console.log(typeof str1)
+        console.log(typeof(str1))
+
+        // 类型转换
+            // 隐式转换
+            console.log('xwg' + 1)//与str相加视为str拼接
+            console.log('11' - 11)//视为number
+            console.log(3 - '2')//视为number
+            console.log(+'123')//转换为数字
+            
+            // 显式转换
+            let string = '123'
+            console.log(Number(string))
+            console.log(parseInt('12px'))//12
+            console.log(parseInt('12.34px'))//12
+            console.log(parseFloat('12.34px'))//12.34
+
+            let num1 = +prompt('请输入第一个数字')
+            let num2 = +prompt('请输入第二个数字')
+            document.write(`两个数字的和为${num1 + num2}`)
+
+    </script>
+</body>
+</html>
