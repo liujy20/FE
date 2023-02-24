@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if分支
+        {
+            //0之外为true
+            //''之外为true
+
+            // if (true) {
+            //     console.log('执行成功')
+            // }
+
+            // let score = +prompt('请输入成绩')
+            // if (score >= 80) {
+            //     alert('恭喜你通过')
+            // } else {
+            //     alert('请重试')
+            // }
+
+            // let year = +prompt('输入年份')
+            // if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+            //     alert('闰年')
+            // } else {
+            //     alert('不是闰年')
+            // }
+        }
+
+        // 三元运算符
+        {
+            // console.log(3 > 5 ? 3 : 5)
+
+            // let num1 = +prompt('输入第一个数')
+            // let num2 = +prompt('输入第二个数')
+            // console.log(num1 < num2 ? num2 : num1)
+
+            // let num = prompt('输入数字')
+            // alert(num < 10 ? 0 + num : num)
+        }
+
+        // switch
+        {
+            // switch (1) {
+            //     case 1:
+            //         console.log('1')
+            //         break
+            //     case 2:
+            //         console.log('2')
+            //         break
+            //     case 3:
+            //         console.log('3')
+            //         break
+            //     default:
+            //         console.log('g')
+            // }
+
+            let num1 = +prompt('输入数字1')
+            let num2 = +prompt('输入数字2')
+            let sp = prompt('输入运算符')
+            switch (sp) {
+                case '+':
+                    alert(`${num1 + num2}`)
+                    break;
+                case '-':
+                    alert(`${num1 - num2}`)                    
+                    break;
+                case '*':
+                    alert(`${num1 * num2}`)                    
+                    break;
+            
+                default:
+                    alert(`${num1 / num2}`)
+                    break;
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
