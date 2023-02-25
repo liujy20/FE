@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        table,
+        tr,
+        th,
+        td{
+            border: 1px solid #000;
+        }
+
+        table{
+            border-collapse: collapse;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        th{
+            width: 80px;
+        }
+
+        tr{
+            height: 30px;
+        }
+
+        tr:first-child{
+            background-color: #ddd;
+        }
+
+        tr:not(:first-child):hover{
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>学生列表</caption>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>住址</th>
+        </tr>
+
+        <!-- <tr>
+            <td>1</td>
+            <td>小明</td>
+            <td>12</td>
+            <td>男</td>
+            <td>河北</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>小明</td>
+            <td>12</td>
+            <td>男</td>
+            <td>河北</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>小明</td>
+            <td>12</td>
+            <td>男</td>
+            <td>河北</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>小明</td>
+            <td>12</td>
+            <td>男</td>
+            <td>河北</td>
+        </tr> -->
+
+        <script>
+            let students = [
+                {name: '小红', age: 12, gender: '女', hometown: '河北'},
+                {name: '小刚', age: 14, gender: '男', hometown: '四川'},
+                {name: '小李', age: 22, gender: '女', hometown: '湖北'},
+                {name: '小赵', age: 15, gender: '男', hometown: '陕西'},
+            ]
+
+            for(let i in students){
+                document.write('<tr>')
+                
+                document.write(`<td>${+i + 1}</td>`)
+
+                for(let k in students[i]){
+                    document.write(`
+                        <td>${students[i][k]}</td>
+                    `)
+                }
+                document.write('</tr>')
+            }
+        </script>
+    </table>
+</body>
+</html>

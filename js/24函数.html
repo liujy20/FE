@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function print() {
+            document.write('abcd<br>')
+        }
+
+        print()
+        print()
+        print()
+
+        function getSum(end = 0){
+            let sum = 0
+            for(let i = 1; i <= end; i++){
+                sum += i
+            }
+            console.log(sum)
+        }
+
+        getSum(100)
+        getSum()
+
+        function printAB(a = 0,b = 0){
+            console.log(a)
+            console.log(b)
+        }
+        printAB(1,2)
+        printAB(3)
+    </script>
+</body>
+</html>

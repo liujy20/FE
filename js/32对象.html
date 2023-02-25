@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pink = {
+            uname: 'pink',
+            age: 12,
+            gender: '男',
+            'hobby': '唱跳rap'
+        }
+        // 查
+        console.log(pink.uname)
+        console.log(pink['uname'])
+        console.log(pink['hobby'])
+        // 增
+        pink.address = '中国'
+        console.log(pink.address)
+        // 改
+        pink.gender = '女'
+        console.log(pink.gender)
+        // 删
+        delete pink.address
+        console.log(pink)
+
+        console.log(typeof pink)
+    </script>
+</body>
+</html>

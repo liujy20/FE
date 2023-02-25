@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = 18
+        // console.log(false && age++)//左边为false，不进行后面操作
+        // console.log(age)//18
+
+        // console.log(true || age++)//左边为true,不进行后面的操作
+        // console.log(age)
+
+        /*
+            && 左真取右 左假取左
+            || 左真取左 左假取右
+        */
+
+        function fn(x, y){
+            x = x || 0
+            y = y || 0
+            console.log(x + y)
+        }
+        fn(1,2)
+        fn()
+    </script>
+</body>
+</html>
