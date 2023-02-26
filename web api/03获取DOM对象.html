@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">123</div>
+    <div class="box1">321</div>
+    <div id="box2">111</div>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        // 匹配第一个元素
+        // const box = document.querySelector('div')
+        // console.log(box)
+        // box.style.color = 'red'
+        
+        // const box1 = document.querySelector('.box1')
+        // console.log(box1)
+
+        // const box3 = document.querySelector('#box2')
+        // console.log(box3)
+
+        // const li = document.querySelector('ul li:first-child')
+        // console.log(li)
+
+
+        //返回所有值
+        const liAll = document.querySelectorAll('ul li')
+        console.log(liAll)
+        //获得的伪数组不能增删改查
+        for(let i in liAll){
+            console.log(liAll[+i])
+        }
+
+
+    </script>
+</body>
+</html>
