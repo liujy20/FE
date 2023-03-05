@@ -127,6 +127,25 @@
       { url: './images/slider08.jpg', title: '谁不想和小猫咪贴贴呢！', color: 'rgb(99, 72, 114)' },
     ]
 
+    // const random = Math.floor(Math.random() * sliderData.length)
+    const img = document.querySelector('.slider-wrapper img')
+    const p = document.querySelector('.slider-footer p')
+    const footer = document.querySelector('.slider-footer')
+
+    let i = 0
+    setInterval(function(){
+        img.src = sliderData[i].url
+        p.innerHTML = sliderData[i].title
+        footer.style.backgroundColor = sliderData[i].color
+
+        document.querySelector(`.slider-indicator .active`).classList.remove('active')
+        document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
+
+        i = (i + 1) % 8
+    }, 1000)
+    // const li = document.querySelector(`.slider-indicator li:nth-child(${random + 1})`)
+
+
 
   </script>
 </body>
