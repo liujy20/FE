@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            position: relative;
+            margin: 50px auto;
+            width: 600px;
+            height: 200px;
+            background-color: skyblue;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .box div{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: 900;
+            background-color: pink;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        广告
+        <div>X</div>
+    </div>
+    <script>
+        const close = document.querySelector('.box div')
+        const box = document.querySelector('.box')
+        close.addEventListener('click',function(){
+            box.style.display = 'none'
+        })
+    </script>
+</body>
+</html>
