@@ -1216,7 +1216,10 @@
   </div>
 
   <script>
-    // 电梯导航
+    //电梯导航
+    (function(){
+      // 电梯导航
+    const entry = document.querySelector('.xtx_entry')
     const elevator = document.querySelector('.xtx-elevator')
     window.addEventListener('scroll',function(){
     
@@ -1227,7 +1230,7 @@
       //   elevator.style.opacity = 0
       // }
 
-      elevator.style.opacity = n >= 300 ? 1 : 0
+      elevator.style.opacity = n >= entry.offsetTop ? 1 : 0
     })
 
     // 回到顶部
@@ -1237,6 +1240,52 @@
 
       window.scrollTo(0,0)//x,y滚动到0,0
     })
+
+    })();
+
+    (function(){
+      //导航控制页面
+      const list = document.querySelector('.xtx-elevator-list')
+      list.addEventListener('click',function(e){
+        if(e.target.tagName === 'A' && e.target.dataset.name){
+          const active = document.querySelector('.xtx-elevator-list .active')
+          if(active){
+            active.classList.remove('active')
+          }
+          e.target.classList.add('active')
+
+          const top = document.querySelector(`.xtx_goods_${e.target.dataset.name}`).offsetTop
+
+          document.documentElement.scrollTop = top
+        }
+      })
+
+      //页面改变导航
+      window.addEventListener('scroll',function(){
+        const active = document.querySelector('.xtx-elevator-list .active')
+        if(active){
+          active.classList.remove('active')
+        }
+
+        const news = document.querySelector('.xtx_goods_new')
+        const populars = document.querySelector('.xtx_goods_popular')
+        const brands = document.querySelector('.xtx_goods_brand')
+        const topics = document.querySelector('.xtx_goods_topic')
+
+        const n = document.documentElement.scrollTop
+
+        if(n >= news.offsetTop && n < populars.offsetTop){
+          document.querySelector('[data-name="new"]').classList.add('active')
+        }else if(n >= populars.offsetTop && n < brands.offsetTop){
+          document.querySelector('[data-name="popular"]').classList.add('active')
+        }else if(n >= brands.offsetTop && n < topics.offsetTop){
+          document.querySelector('[data-name="brand"]').classList.add('active')
+        }else if(n >= topics.offsetTop){
+          document.querySelector('[data-name="topic"]').classList.add('active')
+        }
+
+      })
+    })();
   </script>
 </body>
 
