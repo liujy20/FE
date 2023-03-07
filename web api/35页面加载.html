@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // load等待资源加载完毕
+        // window.addEventListener('load',function(){
+        //     const btn = document.querySelector('button')
+        //     btn.addEventListener('click',function(){
+        //         alert('a')
+        //     })
+        // })
+
+        //等待标签加载完毕
+        document.addEventListener('DOMContentLoaded',function(){
+            const btn = document.querySelector('button')
+            btn.addEventListener('click',function(){
+                alert('a')
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>btn</button>
+</body>
+</html>

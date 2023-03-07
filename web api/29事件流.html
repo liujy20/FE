@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: antiquewhite;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        const father = document.querySelector('.father')
+        const son = document.querySelector('.son')
+
+        
+
+        // 捕获true 大到小
+        // document.addEventListener('click',function(){
+        //     alert('a')
+        // },true)
+        // father.addEventListener('click',function(){
+        //     alert('b')
+        // },true)
+        // son.addEventListener('click',function(){
+        //     alert('c')
+        // },true)
+
+
+        // 冒泡小到大 addEventListener默认为false
+        // document.addEventListener('click',function(){
+        //     alert('a')
+        // })
+        // father.addEventListener('click',function(){
+        //     alert('b')
+        // })
+        // son.addEventListener('click',function(){
+        //     alert('c')
+        // })
+
+        // 阻止传播
+        document.addEventListener('click',function(){
+            alert('a')
+        })
+        father.addEventListener('click',function(){
+            alert('b')
+        })
+        son.addEventListener('click',function(e){
+            alert('c')
+            e.stopPropagation()
+        })
+    </script>
+</body>
+</html>
