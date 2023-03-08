@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        const ul = document.querySelector('ul')
+
+        const li = ul.children[0].cloneNode(true)
+        //默认为false 克隆只包括标签
+        // true包括子节点
+
+        ul.appendChild(li)
+        ul.insertBefore(li,ul.children[0])//添加结点
+
+        ul.removeChild(ul.children[3])//删除结点
+    </script>
+</body>
+</html>

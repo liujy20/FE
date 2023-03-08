@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="aaa">
+        <div class="aa">
+            <div class="a"></div>
+        </div>
+    </div>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        const a = document.querySelector('.a')
+        console.log(a)
+        console.log(a.parentNode)//父节点
+        console.log(a.parentNode.parentNode)
+
+
+        const ul = document.querySelector('ul')
+        console.log(ul.children)//子节点
+
+        const li2 = document.querySelector('li:nth-child(2)')
+        console.log(li2.innerHTML)
+        console.log(li2.previousElementSibling.innerHTML)//上兄结点
+        console.log(li2.nextElementSibling.innerHTML)//下兄节点
+        
+    </script>
+</body>
+</html>
