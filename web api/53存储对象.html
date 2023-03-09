@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            uname:'xwg',
+            age:'12'
+        }
+        // 无法直接使用localStorage 存储复杂数据类型
+        // localStorage.setItem('obj',obj)
+        // console.log(localStorage.getItem('obj'))
+        
+
+
+
+        // 复杂数据类型需要字符串存储
+        localStorage.setItem('obj',JSON.stringify(obj))
+        
+        // console.log(localStorage.getItem('obj'))
+        // {"uname":"xwg","age":"12"}  JSON对象属性和值都是""
+
+        console.log(JSON.parse(localStorage.getItem('obj')))
+
+        // JSON.stringify() to string
+        // JSON.parse() to obj
+    </script>
+</body>
+</html>
