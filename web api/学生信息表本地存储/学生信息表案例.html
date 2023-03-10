@@ -72,11 +72,87 @@
       //   }
       // ]
       
+    
 
       // 获取本地数据 
+      const tbody = document.querySelector('tbody')
       const data = localStorage.getItem('stuData')
-      const arr = [] = data === '' ? JSON.parse(data) : []
+      const arr = data ? JSON.parse(data) : []
+      console.log(arr)
+      render()
+
+      // 渲染
       
+      function render(){
+        const trArr = arr.map(function(item,i){
+
+          return `
+          <tr>
+            <td>${item.stuId}</td>
+            <td>${item.uname}</td>
+            <td>${item.age}</td>
+            <td>${item.gender}</td>
+            <td>${item.salary}</td>
+            <td>${item.city}</td>
+            <td>
+              <a href="javascript:" data-id=${i}>删除</a>
+            </td>
+          </tr>
+          
+          `
+        })
+
+
+        tbody.innerHTML = trArr.join('')
+
+      }
+      
+
+      // 录入
+      const info = document.querySelector('.info')
+      info.addEventListener('submit',function(e){
+        e.preventDefault()
+
+        const items = info.querySelectorAll('[name]')
+        
+        const obj = {}
+        obj.stuId = arr.length ? arr[arr.length - 1].stuId + 1 : 1
+        
+        for(let i = 0; i < items.length; i++){
+          // console.log(item[i].value)
+
+          if(items[i].value === ''){
+            return alert('输入内容为空')
+          }
+          const item = items[i]
+          obj[item.name] = item.value
+          // console.log(item.name)
+          // console.log(item.value)
+        }
+        // console.log(obj)
+        arr.push(obj)
+
+
+        localStorage.setItem('stuData',JSON.stringify(arr))
+
+        render()
+
+        this.reset()
+      })
+
+
+      // 删除
+      tbody.addEventListener('click',function(e){
+        if(e.target.tagName === 'A'){
+          arr.splice(e.target.dataset.id,1)
+
+          localStorage.setItem('stuData',JSON.stringify(arr))
+
+
+          render()
+        }
+      })
+
       /*
 
       const uname = document.querySelector('.uname')

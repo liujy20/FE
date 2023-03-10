@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const str = '这是前端，这是前端，这是前端，这是前端，这是前端'
+        // // 定义规则
+        // const reg = /前端/
+        // // 检测
+        // console.log(reg.test(str))
+        // // 返回位置
+        // console.log(reg.exec(str))
+
+
+
+
+
+        // // 边界符
+        // console.log(/哈/.test('哈哈哈'))
+        
+        // console.log(/^哈/.test('哈哈哈'))//true
+        // console.log(/^哈/.test('二哈'))//false
+
+        // // ^ 开始    $ 结尾
+        // // 精确匹配
+        // console.log(/^哈$/.test('哈'))//true
+        // console.log(/^哈$/.test('哈哈'))//false
+
+
+
+
+        // // * >= 0次
+        // console.log(/^哈*$/.test('哈哈哈哈哈哈哈'))//true
+        // console.log(/^哈*$/.test(''))//true
+        // console.log(/^哈*$/.test('二哈'))//false
+
+        
+        // // + >= 1次
+        // console.log(/^哈+$/.test('哈哈哈哈哈哈哈'))//true
+        // console.log(/^哈+$/.test(''))//false
+        // console.log(/^哈+$/.test('二哈'))//false
+
+
+        // // ?   0 or 1
+        // console.log(/^哈?$/.test('哈哈哈哈哈哈哈'))//false
+        // console.log(/^哈?$/.test(''))//true
+        // console.log(/^哈?$/.test('二哈'))//false
+
+
+
+        // // {n} n次
+        // console.log(/^哈{3}$/.test('哈哈哈哈哈哈哈'))//false
+        // console.log(/^哈{3}$/.test('哈哈哈'))//true
+        // console.log(/^哈{3}$/.test('二哈'))//false
+
+
+        // // ,左右无空格
+        // // {n,} >= n次
+        // console.log(/^哈{3,}$/.test('哈哈哈哈哈哈哈'))//true
+        // console.log(/^哈{3,}$/.test('哈哈哈'))//true
+        // console.log(/^哈{3,}$/.test('二哈'))//false
+
+
+
+        // // ,左右无空格
+        // // {n,m}  n~m次
+        // console.log(/^哈{3,6}$/.test('哈哈哈哈哈哈哈'))//false
+        // console.log(/^哈{3,6}$/.test('哈哈哈哈'))//true
+        // console.log(/^哈{3,6}$/.test('哈哈'))//false
+
+
+
+        // 字符类
+        // 匹配[]内一个为true 多个为false
+        // console.log(/^[abc]$/.test('a'))//true
+        // console.log(/^[abc]$/.test('b'))//true
+        // console.log(/^[abc]$/.test('c'))//true
+        // console.log(/^[abc]$/.test('abc'))//false
+        // console.log(/^[abc]{2}$/.test('ab'))//true
+
+        // console.log(/^[a-z]$/.test('s'))//true
+        // console.log(/^[A-Z]$/.test('a'))//false
+        // console.log(/^[0-9]$/.test('2'))//true
+        // console.log(/^[a-zA-Z0-9]$/.test('s'))//true
+        // console.log(/^[a-zA-Z0-9]$/.test('5'))//true
+
+
+
+
+        // []内^ 取反
+        // console.log(/^[^a-z]$/.test('5'))//true
+
+
+
+        // . 换行符以外的字符
+        // console.log(/^.$/.test('5'))//true
+
+
+        // 预定义
+        // \d [0-9]
+        // \D [^0-9]
+        // \w [a-zA-Z0-9_]
+        // \W [^a-zA-Z0-9_]
+        // \s [\t\r\n\v\f]
+        // \S [^\t\r\n\v\f]
+
+
+
+        // // 修饰符
+        // console.log(/^[java]$/.test('JAVA'))//false
+        // console.log(/^[java]$/i.test('JAVA'))//true 忽略大小写
+
+
+
+        // 替换
+        const str = '这是java,这是java,这是java,这是java'
+        const re = str.replace(/java/i,'前端')
+        console.log(re)// '这是前端,这是java,这是java,这是java'
+        const re1 = str.replace(/java/ig,'前端')// 全局替换
+        console.log(re1)
+
+
+
+
+
+
+
+
+
+        // 最少五位数字，第一位不为零
+        // reg = /^[1-9][0-9]{4,}$/
+
+        
+
+
+    </script>
+</body>
+</html>
