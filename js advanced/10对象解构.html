@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 对象解构
+        const obj = {
+            uname: 'xwg',
+            age: 10
+        }
+
+        // 取出单个属性
+        const {age} = obj
+        console.log(age)
+        
+        //变量名和属性名要相同
+        // const {uname, age} = obj
+        
+        
+        // 使用不同于属性名的变量名
+        // const {uname: username, age} = obj
+        
+
+
+        // 对象数组解构
+        const arr = [
+            {
+                name: '佩奇',
+                age: 18
+            }
+        ]
+        // const [{name: uname, age}] = arr
+
+
+        // 多级对象解构
+        // const pig = {
+        //     name: '佩奇',
+        //     age: 10,
+        //     family: {
+        //         father: '猪爸爸',
+        //         mather: '猪妈妈'
+        //     }
+        // }
+        // const {name, age, family:{father, mather}} = pig
+        // console.log(name)
+        // console.log(age)
+        // console.log(father)
+        // console.log(mather)
+
+    </script>
+</body>
+</html>

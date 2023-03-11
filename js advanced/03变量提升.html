@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(num + '个')
+        var num = 10
+
+        // 把var声明的变量提升到 当前作用域的最前面
+        // 提升声明 不提升赋值
+        // var num
+        // console.log(num + '个')
+        // var num = 10
+
+
+        fn()
+        function fn(){
+            console.log('函数提升')
+        }
+
+
+        // 函数提升
+        // function fn(){
+        //     console.log('函数提升')
+        // }
+        
+        // fn()
+        // function fn(){
+        //     console.log('函数提升')
+        // }
+    </script>
+</body>
+</html>
