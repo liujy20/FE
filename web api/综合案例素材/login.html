@@ -33,7 +33,7 @@
             </div>
             <div class="input">
               <span class="iconfont icon-zhanghao"></span>
-              <input required type="text" placeholder="请输入用户名称/手机号码" name="username">
+              <input required type="text" placeholder="请输入用户名称/手机号码" name="username" autocomplete="off">
             </div>
             <div class="input">
               <span class="iconfont icon-suo"></span>
@@ -77,7 +77,41 @@
     </div>
   </div>
   <script>
+    // tab切换
+    const nav = document.querySelector('.tab-nav')
+    const pane = document.querySelectorAll('.tab-pane')
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName === 'A'){
+        nav.querySelector('.active').classList.remove('active')
+        e.target.classList.add('active')
+        // console.log(pane[0].style.display)
 
+        // 关闭所有显示
+        for(let i = 0; i < pane.length; i++){
+          pane[i].style.display = 'none'
+        }
+
+        // console.log(e.target.dataset.id)
+        // 打开对应显示
+        pane[e.target.dataset.id].style.display = 'block'
+      }
+    })
+    console.log(localStorage.getItem('xtx-uname'))
+
+    const form = document.querySelector('form')
+
+    const uname = document.querySelector('[name=username]')
+    const agree = document.querySelector('[name=agree]')
+    form.addEventListener('submit',function(e){
+      e.preventDefault()
+      if(!agree.checked){
+        return alert('请勾选同意协议')
+      }
+
+      localStorage.setItem('xtx-uname',uname.value)
+
+      location.href = './index.html'
+    })
   </script>
 </body>
 
