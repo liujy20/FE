@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            forEach: 遍历数组
+            filter: 过滤数组，返回新数组
+            map: 处理数组，返回新数组
+            reduce: 累加器，返回累计结果
+        */
+        const arr = [1, 5, 8]
+
+        // 无初始值
+        const total1 = arr.reduce(function(prev, current){
+            return prev + current
+        })
+        console.log(total1)
+
+        // 有初始值
+        const total2 = arr.reduce(function(prev, current){
+            return prev + current
+        }, 10)
+        console.log(total2)
+
+        // 箭头写法
+        const total3 = arr.reduce((prev, current) => prev + current, 10)
+        console.log(total3)
+    </script>
+</body>
+</html>

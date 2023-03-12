@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //对象字面量创建
+        const obj1 = {uname: 'aa'}
+
+        //new Object创建
+        const obj2 = new Object({uname: 'bb'})
+
+
+
+        
+        
+        // 构造函数创建对象
+        function Color(name){
+            this.name = name
+        }
+        // 实例化
+        const obj3 = new Color('blue')
+        console.log(obj3.name)//实例属性
+
+        Color.num  = 256//静态属性
+        console.log(Color.num)
+        // console.log(obj3.num)//undefined
+        // 只能通过构造函数名访问
+    </script>
+</body>
+</html>
