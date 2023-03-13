@@ -16,21 +16,23 @@
         */
         const arr = [1, 5, 8]
 
-        // 无初始值
+        // 无初始值 上一次值为数组第一个元素的值
         const total1 = arr.reduce(function(prev, current){
+            // console.log(1)
             return prev + current
         })
         console.log(total1)
 
         // 有初始值
         const total2 = arr.reduce(function(prev, current){
+            // console.log(2)
             return prev + current
         }, 10)
         console.log(total2)
 
-        // 箭头写法
-        const total3 = arr.reduce((prev, current) => prev + current, 10)
-        console.log(total3)
+    //     // 箭头写法
+    //     const total3 = arr.reduce((prev, current) => prev + current, 10)
+    //     console.log(total3)
     </script>
 </body>
 </html>
