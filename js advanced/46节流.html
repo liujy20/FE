@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 500px;
+      background-color: #ccc;
+      color: #fff;
+      text-align: center;
+      font-size: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script src="./lodash.min.js"></script>
+  <script>
+    // 节流
+    // 页面缩放 鼠标滚动多次运行会产生卡顿
+    // 单位时间频繁触发的事件 只执行一次 直到一次执行完毕
+    const box = document.querySelector('.box')
+    let i = 1
+    function mouseMove(){
+      box.innerHTML = i++
+    }
+
+    // lodash处理
+    // box.addEventListener('mousemove', _.throttle(mouseMove, 500))
+
+    // 手写定时器函数
+    function throttle(fn, t){
+      let timer = null
+      return function(){
+        if(!timer){
+            timer = setTimeout(function (){
+                fn()
+                // 清空定时器
+                timer = null
+
+                // 在定时器内，无法使用clearTimeout清空定时器
+                // clearTimeout(timer)
+            }, t)
+        }
+        
+      }
+    }
+    box.addEventListener('mousemove', throttle(mouseMove, 500))
+  </script>
+</body>
+
+</html>

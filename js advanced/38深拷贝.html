@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            name: 'wg',
+            age: 11,
+            hobby: ['乒乓球', '篮球'],
+            family: {
+                baby: 'xwg'
+            }
+        }
+        const o = {}
+
+        function deepCopy (newObj, oldObj){
+            for(let k in oldObj){
+                if(oldObj[k] instanceof Array){
+                    // 处理数组
+                    newObj[k] = []
+                    deepCopy(newObj[k],oldObj[k])
+                }else if(oldObj[k] instanceof Object){
+                    newObj[k] = {}
+                    deepCopy(newObj[k], oldObj[k])
+                }else{
+                    newObj[k] = oldObj[k]
+                }
+                
+            }
+        }
+
+        deepCopy(o, obj)
+        o.family.baby = 'dwg'
+        console.log(obj)
+    </script>
+</body>
+</html>

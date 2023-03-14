@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+
+    <script>
+        const obj = {
+            name: 'xwg'
+        }
+        function fn(x = 0, y = 0){
+            console.log(this)
+            console.log(x + y)
+
+        }
+        // call
+        // (函数执行时使用的this, 函数参数1, 参数2)
+        // 返回值是fn本身
+        // fn.call(obj, x, y)
+
+
+
+
+
+        // apply
+        // (函数执行时使用的this, 数组)
+        // 返回值是fn本身
+        // fn.apply(obj, [1, 2])
+
+        // // 求数组最大值
+        // const max = Math.max.apply(Math, [1, 2, 4, 6])
+        // // const max = Math.max(...[1, 2, 4, 6])
+        // console.log(max)
+
+
+        // bind
+        // 不执行fn函数 
+        // 创造一个新函数fn 其中this指向bind的参数 返回值为新函数
+        const func = fn.bind(obj)
+        func()
+
+
+
+        // 按钮点击禁用2s后恢复
+        const btn = document.querySelector('button')
+        btn.addEventListener('click',function(){
+            this.disabled = true
+
+
+            // this指向window
+            // setTimeout(function(){
+            //     this.disabled = false
+            // }, 2000)
+
+
+            //bind function的this = btn
+            setTimeout(function(){
+                this.disabled = false
+            }.bind(this), 2000)
+        })
+
+
+
+    </script>
+</body>
+</html>

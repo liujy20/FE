@@ -28,7 +28,7 @@
         // fn()
 
 
-        数据私有
+        // 数据私有
         function count(){
             let i = 0
             function f(){
@@ -37,9 +37,13 @@
             }
             return f
         }
+        console.log(count())
+
         const fn = count()
 
+        fn()
         // fn() => count() return f => f()
+
         
     </script>
 </body>
